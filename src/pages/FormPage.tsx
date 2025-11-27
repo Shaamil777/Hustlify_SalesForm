@@ -40,14 +40,9 @@ function FormPage() {
                 <footer className="text-center py-12 px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="border-t border-gray-700 pt-8">
-                            <p className="text-gray-400 text-sm mb-4">
-                                Have questions? Contact us at{' '}
-                                <a href="mailto:careers@company.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                                    careers@company.com
-                                </a>
-                            </p>
+
                             <p className="text-gray-500 text-xs">
-                                © 2025 Your Company. All rights reserved.
+                                © 2025 Hustlifygit. All rights reserved.
                             </p>
                         </div>
                     </div>
