@@ -247,21 +247,21 @@ function Form() {
   };
 
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8">
+    <div className="py-4 sm:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+        <div className="bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
           {/* Header */}
-          <div className="bg-linear-to-r from-blue-600 to-purple-600 px-8 py-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+          <div className="bg-linear-to-r from-blue-600 to-purple-600 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
               Application Form
             </h2>
-            <p className="text-blue-100 text-lg">
+            <p className="text-blue-100 text-sm sm:text-base md:text-lg">
               Fill out the form below to apply
             </p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="px-8 py-10 space-y-6">
+          <form onSubmit={handleSubmit} className="px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 space-y-5 sm:space-y-6">
             {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -346,12 +346,12 @@ function Form() {
               <label htmlFor="phoneNumber" className="block text-sm font-semibold text-gray-700 mb-2">
                 Phone Number <span className="text-red-500">*</span>
               </label>
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                 <select
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={handleChange}
-                  className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none bg-white"
+                  className="w-full sm:w-auto px-3 sm:px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none bg-white text-sm sm:text-base"
                 >
                   {countryCodes.map((item) => (
                     <option key={item.code} value={item.code}>
@@ -366,12 +366,12 @@ function Form() {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   maxLength={15}
-                  className={`flex-1 px-4 py-3 rounded-lg border ${errors.phoneNumber
+                  className={`w-full sm:flex-1 px-3 sm:px-4 py-3 rounded-lg border ${errors.phoneNumber
                     ? 'border-red-500 focus:ring-red-500'
                     : formData.phoneNumber.replace(/[\s\-()]/g, '').length >= 10
                       ? 'border-green-500 focus:ring-green-500'
                       : 'border-gray-300 focus:ring-blue-500'
-                    } focus:ring-2 focus:border-transparent transition duration-200 outline-none`}
+                    } focus:ring-2 focus:border-transparent transition duration-200 outline-none text-sm sm:text-base`}
                   placeholder="1234567890"
                   autoComplete="tel"
                 />
