@@ -42,7 +42,7 @@ function FormPage() {
                         <div className="border-t border-gray-700 pt-8">
 
                             <p className="text-gray-500 text-xs">
-                                © 2025 Hustlifygit. All rights reserved.
+                                © 2025 Hustlify. All rights reserved.
                             </p>
                         </div>
                     </div>
