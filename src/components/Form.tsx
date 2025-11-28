@@ -148,7 +148,7 @@ function Form() {
     if (!formData.educationalQualification.trim()) {
       newErrors.educationalQualification = 'Educational qualification is required';
     } else if (formData.educationalQualification.trim().length < 5) {
-      newErrors.educationalQualification = 'Educational qualification must be at least 5 characters';
+      newErrors.educationalQualification = 'Educational qualification must be at least 3 characters';
     } else if (formData.educationalQualification.trim().length > 200) {
       newErrors.educationalQualification = 'Educational qualification must not exceed 200 characters';
     } else if (!educationRegex.test(formData.educationalQualification.trim())) {
@@ -417,7 +417,7 @@ function Form() {
                 maxLength={200}
                 className={`w-full px-4 py-3 rounded-lg border ${errors.educationalQualification
                   ? 'border-red-500 focus:ring-red-500'
-                  : formData.educationalQualification.trim().length >= 5
+                  : formData.educationalQualification.trim().length >= 3
                     ? 'border-green-500 focus:ring-green-500'
                     : 'border-gray-300 focus:ring-blue-500'
                   } focus:ring-2 focus:border-transparent transition duration-200 outline-none`}
